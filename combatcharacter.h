@@ -30,7 +30,6 @@ private:
 
 // Strength Skills
 
-
     int Athletics;
 
 // Dexterity Skills

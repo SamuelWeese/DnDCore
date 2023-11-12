@@ -10,6 +10,11 @@ struct size {
 
 };
 
+struct attunable {
+    bool attuned = false;
+    bool canAttune = false;
+};
+
 class item
 {
     // String
@@ -17,10 +22,12 @@ class item
     std::string description;
     std::string source;
     virtual std::string type;
+
     // Weight
     int weight;
+
     // Magic
-    bool attuned;
+    attunable weaponAttuned;
 
     // Cost
 private:

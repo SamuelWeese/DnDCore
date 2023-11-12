@@ -2,8 +2,8 @@
 #define WEAPON_H
 #include "dice.h"
 #include "item.h"
-
-struct properties {
+#include "damage.h"
+struct weaponProperties {
     bool twoHanded = false;
     bool finesse = false;
     bool heavy = false;
@@ -18,7 +18,7 @@ struct properties {
 };
 
 
-class weapon
+class weapon : item
 {
 // General
     int range;
@@ -28,6 +28,7 @@ class weapon
     damageType damageTypes;
     dice damageDice;
     int damageAdder;
+    weaponProperties properties;
 public:
     weapon();
 };
